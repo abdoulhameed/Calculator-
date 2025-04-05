@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scientific Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <button onclick="toggleTheme()">🌙/☀️</button>
+  <button onclick="startListening()">🎤</button>
+  <div class="calculator">
+    <input type="text" id="display" readonly />
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="backspace()">←</button>
+      <button onclick="appendValue('(')">(</button>
+      <button onclick="appendValue(')')">)</button>
+      <button onclick="appendValue('Math.PI')">π</button>
+      <button onclick="appendValue('sin(')">sin</button>
+      <button onclick="appendValue('cos(')">cos</button>
+      <button onclick="appendValue('tan(')">tan</button>
+      <button onclick="appendValue('Math.sqrt(')">√</button>
+      <button onclick="appendValue('Math.pow(')">xʸ</button>
+      <button onclick="appendValue('log(')">log</button>
+      <button onclick="appendValue('/')">÷</button>
+      <button onclick="appendValue('*')">×</button>
+      <button onclick="appendValue('-')">−</button>
+      <button onclick="appendValue('+')">+</button>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="calculate()">=</button>
+    </div>
+    <div class="graph-section">
+      <input type="text" id="functionInput" placeholder="Enter function e.g. Math.sin(x)" />
+      <button onclick="plotFunction()">Plot</button>
+      <canvas id="graphCanvas"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
